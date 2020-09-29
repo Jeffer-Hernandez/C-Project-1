@@ -52,24 +52,64 @@ using namespace std;
 // • Instantiates an instance of elapsed_days
 // • Displays the number of elapsed days
 
-bool is_year_valid(long year){}
+class ElapsedDays{
 
-bool is_month_valid(long month){}
+bool is_year_valid(long year){
+    if (year>=1900){
+        true; }
+    
+    else {
+        false; }
+    
+}
 
-bool is_leap_year(long year){}
+bool is_month_valid(long month){
+    if (month>=1 && month <= 12){
+        true;
+    }
+    else {
+        false;
+    }
+}
 
-long return_days_in_month(long year, long month){}
+bool is_leap_year(long year){
+    if (year % 4 == 0){
+        true
+    }
+    else {
+        false
+    }
+}
 
-long return_days_in_year(long year){}
+long return_days_in_month(long year, long month){
 
-void set_elapsed_days(long elapsed_days){}
+}
 
-long get_elapsed_days(){}
+long return_days_in_year(long year){
+    if (year.is_leap_year? ){
+        return 366;
+    }
+    else {
+        return 365;
+    }
+}
 
-void compute_elapsed_days(){}
+void set_elapsed_days(long elapsed_days){
+    elapsed_days = elapsed_days 
+
+    return elapsed_days
+}
+
+long get_elapsed_days(){
+    cout<< elapsed_days << endl;
+}
+
+void compute_elapsed_days(){
+
+}
 
 void display_elapsed_days(){}
-
+}
 
 
 
@@ -78,7 +118,23 @@ void display_elapsed_days(){}
 
 int main(){
 
+bool is_year_valid(year);
 
+bool is_month_valid(month);
+
+bool is_leap_year(year);
+
+long return_days_in_month(year, month);
+
+long return_days_in_year(year);
+
+void set_elapsed_days(elapsed_days);
+
+long get_elapsed_days();
+
+void compute_elapsed_days();
+
+void display_elapsed_days();
 
 
 
