@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <ctime>
 #include <iostream>
 using namespace std;
 
@@ -52,9 +53,46 @@ using namespace std;
 // • Instantiates an instance of elapsed_days
 // • Displays the number of elapsed days
 
-class ElapsedDays{
+class Rectangle {
+    int width, height;
+  public:
+    void set_values (int,int);
+    int area() {return width*height;}
+};
 
-bool is_year_valid(long year){
+void Rectangle::set_values (int x, int y) {
+  width = x;
+  height = y;
+}
+
+int main () {
+  Rectangle rect;
+  rect.set_values (3,4);
+  cout << "area: " << rect.area();
+  return 0;
+}
+
+
+
+
+class ElapsedDays {
+    long year;
+    long month;
+    long elapsed_days;
+
+    public:
+    bool is_year_valid(long);
+    bool is_month_valid(long);
+    bool is_leap_year(long);
+    long return_days_in_month(long, long);
+    long return_days_in_year(long);
+    void set_elapsed_days(long);
+    long get_elapsed_days();
+    void compute_elapsed_days();
+    void display_elapsed_days();
+}elapsed;
+
+bool ElapsedDays::is_year_valid(long year){
     if (year>=1900){
         true; }
     
@@ -63,7 +101,7 @@ bool is_year_valid(long year){
     
 }
 
-bool is_month_valid(long month){
+bool ElapsedDays::is_month_valid(long month){
     if (month>=1 && month <= 12){
         true;
     }
@@ -72,21 +110,21 @@ bool is_month_valid(long month){
     }
 }
 
-bool is_leap_year(long year){
+bool ElapsedDays::is_leap_year(long year){
     if (year % 4 == 0){
-        true
+        true;
     }
     else {
-        false
-    }
+        false;
+    }   
 }
 
-long return_days_in_month(long year, long month){
+long ElapsedDays::return_days_in_month(long year, long month){
 
 }
 
-long return_days_in_year(long year){
-    if (year.is_leap_year? ){
+long ElapsedDays::return_days_in_year(long year){
+    if (elapsed.is_leap_year(year)? ){
         return 366;
     }
     else {
@@ -94,21 +132,19 @@ long return_days_in_year(long year){
     }
 }
 
-void set_elapsed_days(long elapsed_days){
-    elapsed_days = elapsed_days 
-
-    return elapsed_days
+void ElapsedDays::set_elapsed_days(long elapsed_days){
+    elapsed_days = elapsed_days;       
 }
 
-long get_elapsed_days(){
-    cout<< elapsed_days << endl;
+long ElapsedDays::get_elapsed_days(){
+    return elapsed_days;
 }
 
-void compute_elapsed_days(){
-
+void ElapsedDays::compute_elapsed_days(){
+time_t now = time(0);
 }
 
-void display_elapsed_days(){}
+void ElapsedDays::display_elapsed_days(){}
 }
 
 
@@ -118,25 +154,30 @@ void display_elapsed_days(){}
 
 int main(){
 
-bool is_year_valid(year);
-
-bool is_month_valid(month);
-
-bool is_leap_year(year);
-
-long return_days_in_month(year, month);
-
-long return_days_in_year(year);
-
-void set_elapsed_days(elapsed_days);
-
-long get_elapsed_days();
-
-void compute_elapsed_days();
-
-void display_elapsed_days();
-
-
-
 return 0;
 }
+
+
+
+
+
+// bool is_year_valid(year);
+
+// bool is_month_valid(month);
+
+// bool is_leap_year(year);
+
+// long return_days_in_month(year, month);
+
+// long return_days_in_year(year);
+
+// void set_elapsed_days(elapsed_days);
+
+// long get_elapsed_days();
+
+// void compute_elapsed_days();
+
+// void display_elapsed_days();
+
+
+
