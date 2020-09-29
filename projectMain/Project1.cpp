@@ -1,7 +1,6 @@
 #include <iostream>
-#include <cmath>
 #include <ctime>
-#include <iostream>
+
 using namespace std;
 
 // Jeffer Hernandez - 15007776
