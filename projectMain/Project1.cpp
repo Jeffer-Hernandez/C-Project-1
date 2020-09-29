@@ -75,22 +75,23 @@ int main () {
 
 
 
-class ElapsedDays {
-    long year;
-    long month;
-    long elapsed_days;
-
+class Elapsed_Days
+{
+    private:
+        long elapsed_days;
     public:
-    bool is_year_valid(long);
-    bool is_month_valid(long);
-    bool is_leap_year(long);
-    long return_days_in_month(long, long);
-    long return_days_in_year(long);
-    void set_elapsed_days(long);
-    long get_elapsed_days();
-    void compute_elapsed_days();
-    void display_elapsed_days();
-}elapsed;
+        Elapsed_Days();
+        ~Elapsed_Days();
+        bool is_year_valid(long year);
+        bool is_month_valid(long month);
+        bool is_leap_year(long year);
+        long return_days_in_month(long year, long month);
+        long return_days_in_year(long year);
+        void set_elapsed_days(long elapsed_days);
+        long get_elapsed_days();
+        void compute_elapsed_days();
+        void display_elapsed_days();
+};
 
 bool ElapsedDays::is_year_valid(long year){
     if (year>=1900){
