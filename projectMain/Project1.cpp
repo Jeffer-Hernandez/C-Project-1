@@ -13,66 +13,6 @@ using namespace std;
 // Using Virtual Studio that is installed on the Virtual Machine, write a program that computes and displays
 // the number of days that have elapsed between January 1, 1900 and today (the day the program is run).
 
-// The program must be designed as follows:
-// Within a class named elapsed_days, provide the following functions:
-
-// • bool is_year_valid(long year)
-// returns true if year is >= 1900; otherwise false
-
-// • bool is_month_valid(long month)
-// returns true if month is between 1 and 12 (inclusive); otherwise false
-
-// • bool is_leap_year(long year)
-// returns true if year is a leap year
-
-// • long return_days_in_month(long year, long month)
-// returns the number of days for the month month in year year
-
-// • long return days_in_year(year)
-// returns the number of days in year
-
-// • void set_elapsed_days(long elapsed_days)
-// sets the field value set_elapsed_days
-
-// • long get_elapsed_days()
-// returns the field value set_elapsed_days
-
-// • void compute_elapsed days()
-// returns the number of days elapsed between January 1, 1900 and the day the program is run
-
-// • void display_elapsed_days()
-// displays the number of days elapsed in the form “The number of days elapsed
-// since Jan 1, 1900 is xxxx.” Where xxxx is the number of the elapsed days
-
-// • A constructor that determines the number of elapsed days
-
-// • A suitable destructor
-
-
-// Within a main(…) driver function:
-// • Instantiates an instance of elapsed_days
-// • Displays the number of elapsed days
-
-class Rectangle {
-    int width, height;
-  public:
-    void set_values (int,int);
-    int area() {return width*height;}
-};
-
-void Rectangle::set_values (int x, int y) {
-  width = x;
-  height = y;
-}
-
-int main () {
-  Rectangle rect;
-  rect.set_values (3,4);
-  cout << "area: " << rect.area();
-  return 0;
-}
-
-
 
 
 class Elapsed_Days
