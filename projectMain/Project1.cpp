@@ -213,32 +213,20 @@ void Elapsed_Days:: display_elapsed_days()
     cout<<"The number of days elapsed since Jan 1, 1900 is "<<elapsed_days<<endl;
 }
 
-int main(){
-
-return 0;
+int main()
+{
+    // create a new Elapsed_Day object
+    Elapsed_Days days;
+    // display the number of days passed
+    days.display_elapsed_days();
+    return 0;
 }
 
 
 
 
 
-// bool is_year_valid(year);
 
-// bool is_month_valid(month);
-
-// bool is_leap_year(year);
-
-// long return_days_in_month(year, month);
-
-// long return_days_in_year(year);
-
-// void set_elapsed_days(elapsed_days);
-
-// long get_elapsed_days();
-
-// void compute_elapsed_days();
-
-// void display_elapsed_days();
 
 
 
