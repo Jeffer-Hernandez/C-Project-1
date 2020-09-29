@@ -62,6 +62,7 @@ bool Elapsed_Days:: is_leap_year(long year)
 // function to return number of days for the month in year
 long Elapsed_Days:: return_days_in_month(long year, long month)
 {
+    int daysInMonth = 0;
     // validate year and month is valid
     if(is_year_valid(year) && is_month_valid(month))
     {
@@ -75,36 +76,41 @@ long Elapsed_Days:: return_days_in_month(long year, long month)
             case 8:
             case 10:
             case 12:
-                return 31;
+                daysInMonth =  31;
+                break;
             case 4:
             case 6:
             case 9:
             case 11:
-                return 30;
+                daysInMonth = 30;
+                break;
             case 2: // February, check if year is leap or not
                 if(is_leap_year(year))
-                    return 29;
-                return 28;
+                    daysInMonth = 29;
+                else
+                daysInMonth = 28;
                 
         }
     }
     
-    return 0;
+    return daysInMonth;
 }
 
 // function to return the number of days in year
 long Elapsed_Days:: return_days_in_year(long year)
 {
+    int daysInYear = 0;
     // validate year
     if(is_year_valid(year))
     {
         // check if year is leap or not
         if(is_leap_year(year))
-            return 366;
-        return 365;
+            daysInYear =  366;
+        else
+        daysInYear = 365;
     }
     
-    return 0;
+    return daysInYear;
 }
 
 // function to set the number of elapsed days
@@ -131,13 +137,13 @@ void Elapsed_Days:: compute_elapsed_days()
     long day = curtime_ptr->tm_mday; // day of the month from 1 to 31
     
     // loop to add number of days passed from year 1900 to 1 year previous to current year
-    for(long y=1900;y<year;y++)
+    for (long y = 1900; y < year; y++)
     {
         elapsed_days += return_days_in_year(y);
     }
     
     // loop to add number of days passed in current year from month 1 to 1 month previous to current month
-    for(long m=1;m<month;m++)
+    for (long m = 1; m < month; m++)
     {
         elapsed_days += return_days_in_month(year, m);
     }
@@ -149,7 +155,7 @@ void Elapsed_Days:: compute_elapsed_days()
 // displays the number of days elapsed
 void Elapsed_Days:: display_elapsed_days()
 {
-    cout<<"The number of days elapsed since Jan 1, 1900 is "<<elapsed_days<<endl;
+    cout<< "The number of days elapsed since Jan 1, 1900 is "<< elapsed_days<< endl;
 }
 
 int main()
