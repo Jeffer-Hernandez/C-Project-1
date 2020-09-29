@@ -7,7 +7,7 @@ using namespace std;
 // CSC 231 -0500
 
 // CSC231 Discrete Structure and Applications
-// Programming Assignment
+
 // Counting the Number of Days between January 1, 1900 to today (whenever the program is run)
 // Using Virtual Studio that is installed on the Virtual Machine, write a program that computes and displays
 // the number of days that have elapsed between January 1, 1900 and today (the day the program is run).
