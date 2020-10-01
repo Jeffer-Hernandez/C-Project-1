@@ -31,6 +31,7 @@ class Elapsed_Days
         void compute_elapsed_days();
         void display_elapsed_days();
 };
+
 // constructor to determine the number of elapsed days
 Elapsed_Days::Elapsed_Days()
 {
@@ -162,6 +163,7 @@ int main()
 {
     // create a new Elapsed_Day object
     Elapsed_Days days;
+
     // display the number of days passed
     days.display_elapsed_days();
     return 0;
